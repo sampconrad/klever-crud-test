@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/klever-crud-test/static/css/main.f8a8bde6.css",
-    "main.js": "/klever-crud-test/static/js/main.2f72bd02.js",
+    "main.js": "/klever-crud-test/static/js/main.cd4841cf.js",
     "static/media/shooting-star.svg": "/klever-crud-test/static/media/shooting-star.21fa54f5e707ca4aaefbe09fe7565232.svg",
     "static/media/logo.svg": "/klever-crud-test/static/media/logo.e508030155275995c5f38fe7de486727.svg",
     "index.html": "/klever-crud-test/index.html",
     "main.f8a8bde6.css.map": "/klever-crud-test/static/css/main.f8a8bde6.css.map",
-    "main.2f72bd02.js.map": "/klever-crud-test/static/js/main.2f72bd02.js.map"
+    "main.cd4841cf.js.map": "/klever-crud-test/static/js/main.cd4841cf.js.map"
   },
   "entrypoints": [
     "static/css/main.f8a8bde6.css",
-    "static/js/main.2f72bd02.js"
+    "static/js/main.cd4841cf.js"
   ]
 }
