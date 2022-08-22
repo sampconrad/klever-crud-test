@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Routes, Route, Outlet } from 'react-router-dom';
+
+// PAGES
+import Home from './pages/Home.page';
+import AddToken from './pages/AddToken.page';
+import EditToken from './pages/EditToken.page';
+
+// COMPONENTS
+import Logo from './components/Logo/Logo.component';
+import StarHead from './components/StarHead/StarHead.component';
+
+// PERSISTENT LAYOUT
+const PersistentLayout = () => {
+	return (
+		<>
+			<Logo />
+			<StarHead />
+			<Outlet />
+		</>
+	);
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<PersistentLayout />}>
+					<Route index element={<Home />} />
+					<Route path="/add-token" element={<AddToken />} />
+					<Route path="/edit-token/:id" element={<EditToken />} />
+				</Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;

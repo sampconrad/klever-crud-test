@@ -1,0 +1,17 @@
+@import '../App.scss';
+
+.home-container {
+	margin: 60px 35%;
+	@include respond(tablet) {
+		margin: 60px 100px;
+	}
+	@include respond(phone) {
+		margin: 60px 20px;
+	}
+	.header-home {
+		margin-bottom: 20px;
+		display: flex;
+		// align-items: center;
+		gap: 80px;
+	}
+}

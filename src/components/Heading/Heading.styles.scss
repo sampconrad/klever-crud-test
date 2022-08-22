@@ -1,0 +1,13 @@
+@import '../../App.scss';
+
+.table-head-container {
+	display: flex;
+	justify-content: space-between;
+	color: $white;
+	font-size: 14px;
+	.table-head-left,
+	.table-head-right {
+		padding-left: 40px;
+		font-weight: $weight-semibold;
+	}
+}

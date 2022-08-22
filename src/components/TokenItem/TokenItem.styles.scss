@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.token-list-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 20px auto;
+	font-size: 26px;
+	text-transform: uppercase;
+	.token-list-item-left {
+		display: flex;
+		gap: 15px;
+		.edit-icon {
+			cursor: pointer;
+		}
+		.token-name {
+			font-weight: $weight-semibold;
+		}
+	}
+	.token-balance {
+		font-weight: $weight-semibold;
+	}
+}

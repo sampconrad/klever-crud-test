@@ -1,0 +1,10 @@
+@import '../../App.scss';
+
+.token-list-container {
+	width: 100%;
+	// padding-right: 50px;
+	.token-list-ul {
+		list-style: none;
+		padding-left: 0px;
+	}
+}

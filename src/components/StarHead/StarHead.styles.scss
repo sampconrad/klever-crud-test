@@ -1,0 +1,38 @@
+@import '../../App.scss';
+.wish-wallet-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 60px 35%;
+	@include respond(tablet) {
+		margin: 60px 100px;
+	}
+	@include respond(phone) {
+		margin: 60px 10px;
+	}
+	.starhead-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: nowrap;
+		align-items: center;
+		.starhead-text {
+			font-size: 30px;
+			font-weight: $weight-semibold;
+			@include respond(phone) {
+				font-size: 24px;
+			}
+		}
+		.starhead-icon {
+			margin-right: 5px;
+			img {
+				height: auto;
+				width: 40px;
+				filter: invert(94%) sepia(23%) saturate(3347%) hue-rotate(352deg)
+					brightness(107%) contrast(108%);
+				@include respond(phone) {
+					width: 30px;
+				}
+			}
+		}
+	}
+}

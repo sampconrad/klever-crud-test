@@ -1,0 +1,43 @@
+// KLEVER BTNS
+button {
+	height: 32px;
+	width: 100px;
+	display: block;
+	align-items: center;
+	text-align: center;
+	border: none;
+	border-radius: 6px;
+	color: $white;
+	background-color: $purple-btn;
+	font-size: 14px;
+	font-weight: $weight-semibold;
+	transition: 0.2s;
+	box-shadow: $box-shadow-sm;
+	cursor: pointer;
+	span {
+		color: white;
+		font-size: 28px;
+		margin-left: 5px;
+	}
+}
+
+.btn-purple {
+	background-color: $purple-btn;
+	&:hover {
+		background-color: $purple-btn-dk;
+	}
+}
+
+.btn-red {
+	background-color: $red-btn;
+	&:hover {
+		background-color: $red-btn-dk;
+	}
+}
+
+.btn-grey {
+	background-color: $grey-btn;
+	&:hover {
+		background-color: $grey-btn-lt;
+	}
+}
