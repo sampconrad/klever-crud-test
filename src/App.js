@@ -2,13 +2,13 @@ import './App.scss';
 import { Routes, Route, Outlet } from 'react-router-dom';
 
 // PAGES
-import Home from './pages/Home.page';
-import AddToken from './pages/AddToken.page';
-import EditToken from './pages/EditToken.page';
+import Home from './pages/Home';
+import AddToken from './pages/AddToken';
+import EditToken from './pages/EditToken';
 
 // COMPONENTS
-import Logo from './components/Logo/Logo.component';
-import StarHead from './components/StarHead/StarHead.component';
+import Logo from './components/Logo/Logo';
+import StarHead from './components/StarHead/StarHead';
 
 // PERSISTENT LAYOUT
 const PersistentLayout = () => {

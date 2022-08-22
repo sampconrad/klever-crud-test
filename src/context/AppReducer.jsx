@@ -1,5 +1,4 @@
-/* eslint-disable import/no-anonymous-default-export */
-export default (state, action) => {
+export const AppReducer = (state, action) => {
 	switch (action.type) {
 		// ADD TOKEN CASE
 		case 'ADD_TOKEN':

@@ -1,8 +1,8 @@
 import React from 'react';
-import './Heading.styles.scss'
+import './Heading.styles.scss';
 
 const Heading = () => {
-  return (
+	return (
 		<>
 			<div className="table-head-container">
 				<div className="table-head-left">Tokens</div>

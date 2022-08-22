@@ -2,8 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import './EditToken.styles.scss';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { GlobalContext } from '../context/GlobalState';
-import Form from '../components/Form/Form.component';
+
 import Swal from 'sweetalert2';
+import Form from '../components/Form/Form';
 
 const EditToken = () => {
 	const { tokens, editToken, removeToken } = useContext(GlobalContext);
@@ -75,38 +76,40 @@ const EditToken = () => {
 	};
 
 	return (
-		<div className="add-container">
-			<div className="heading">
-				<h2>Edit Token</h2>
-				<Link to="/">
-					<button className="btn-grey">Voltar</button>
-				</Link>
-			</div>
-			<form className="form-container" action="/" onSubmit={onSubmitHandler}>
-				<Form
-					Label={'Token'}
-					Type={'text'}
-					Name={'name'}
-					Value={selectedToken.name}
-					OnChange={onChangeHandler}
-				/>
-				<Form
-					Label={'Balance'}
-					Type={'number'}
-					Name={'balance'}
-					Value={selectedToken.balance}
-					OnChange={onChangeHandler}
-				/>
-				<div className="btn-container">
-					<button type="button" className="btn-red" onClick={onClickHandler}>
-						Remove
-					</button>
-					<button type="submit" className="btn-purple">
-						Save
-					</button>
+		<>
+			<div className="add-container">
+				<div className="heading">
+					<h2>Edit Token</h2>
+					<Link to="/">
+						<button className="btn-grey">Voltar</button>
+					</Link>
 				</div>
-			</form>
-		</div>
+				<form className="form-container" action="/" onSubmit={onSubmitHandler}>
+					<Form
+						Label={'Token'}
+						Type={'text'}
+						Name={'name'}
+						Value={selectedToken.name}
+						OnChange={onChangeHandler}
+					/>
+					<Form
+						Label={'Balance'}
+						Type={'number'}
+						Name={'balance'}
+						Value={selectedToken.balance}
+						OnChange={onChangeHandler}
+					/>
+					<div className="btn-container">
+						<button type="button" className="btn-red" onClick={onClickHandler}>
+							Remove
+						</button>
+						<button type="submit" className="btn-purple">
+							Save
+						</button>
+					</div>
+				</form>
+			</div>
+		</>
 	);
 };
 

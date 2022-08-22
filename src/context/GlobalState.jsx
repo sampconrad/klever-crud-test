@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useEffect } from 'react';
-import AppReducer from './AppReducer';
+import { AppReducer } from './AppReducer';
 
 const initialState = {
 	tokens: [],
@@ -8,13 +8,15 @@ const initialState = {
 export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({ children }) => {
-	const [state, dispatch] = useReducer(AppReducer, initialState, () => {
-		const localData = localStorage.getItem('tokens');
-		return localData ? JSON.parse(localData) : [];
-	});
+	const [state, dispatch] = useReducer(
+		AppReducer,
+		initialState,
+		(initialValue = initialState) =>
+			JSON.parse(localStorage.getItem('localCart')) || initialValue
+	);
 
 	useEffect(() => {
-		localStorage.setItem('tokens', JSON.stringify(state));
+		localStorage.setItem('localCart', JSON.stringify(state));
 	}, [state]);
 
 	// ADD TOKEN
